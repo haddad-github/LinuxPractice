@@ -1,0 +1,37 @@
+EQUIPMENT
+
+Helm
+Tuskhelm of Joritz the Mighty
+
+Chest Armor
+Relentless Berserker's Aspect
+
+Gloves
+Aspect of Grasping Whirlwind
+
+Pants
+Tibault's Will
+
+Boots
+Ghostwalker Aspect
+
+Amulet
+Aspect of Disobedience
+
+Ring 1
+Bold Chieftain's Aspect
+
+Ring 2
+Aspect of Echoing Fury
+
+Bludgeoning Weapon
+Aspect of the Dire Whirlwind
+
+Dual-Wield Weapon 1
+Aspect of Berserk Ripping
+
+Slashing Weapon
+Aspect of Limitless Rage
+
+Dual-Wield Weapon 2
+Edgemaster's Aspect
