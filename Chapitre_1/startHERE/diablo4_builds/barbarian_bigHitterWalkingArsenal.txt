@@ -1,0 +1,37 @@
+EQUIPMENT
+
+Helm
+Tuskhelm of Joritz the Mighty
+
+Chest Armor
+Weapon Master's Aspect
+
+Gloves
+Earthstriker's Aspect
+
+Pants
+Aspect of the Iron Warrior
+
+Boots
+Ghostwalker Aspect
+
+Amulet
+Aspect of Disobedience
+
+Ring 1
+Aspect of the Relentless Armsmaster
+
+Ring 2
+Aspect of Berserk Fury
+
+Bludgeoning Weapon
+Hellhammer
+
+Dual-Wield Weapon 1
+Aspect of Encroaching Wrath
+
+Slashing Weapon
+Accelerating Aspect
+
+Dual-Wield Weapon 2
+Aspect of Limitless Rage
