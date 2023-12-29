@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux Command Quiz</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="instructions">
+  <p>Before you start:</p>
+  <ol>
+    <li>Open your terminal</li>
+    <li>Do: git clone https://github.com/haddad-github/LinuxPractice.git</li>
+    <li>Do: cd LinuxPractice</li>
+    <li>Do: cd Chapitre_1</li>
+    <li>Do: cd startHERE</li>
+  </ol>
+  <p>That's where the test starts...</p>
+</div>
+
+
+<div class="quiz-container">
+  <h1>Linux Command Quiz</h1>
+
+  <!-- Question 1 -->
+  <div class="question">
+    <p><span class="easy">EASY</span> 1. How many files and folders where you currently are?</p>
+    <input type="text" id="answer1" required>
+    <button onclick="checkAnswer(1, '6')">Submit</button>
+    <span id="feedback1"></span>
+  </div>
+
+  <!-- Question 2 -->
+  <div class="question">
+    <p><span class="easy">EASY</span> 2. Your friend made you download his StreetFighter folder. Can you tell me how many videos are in that folder?</p>
+    <input type="text" id="answer2" required>
+    <button onclick="checkAnswer(2, '5')">Submit</button>
+    <span id="feedback2"></span>
+  </div>
+
+  <!-- Question 3 -->
+  <div class="question">
+    <p><span class="easy">EASY</span> 3. Your friend also made you download his Elden Ring Mods folder. Can you tell me what's the full name of the file that's inside (extension included)?</p>
+    <input type="text" id="answer3" required>
+    <button onclick="checkAnswer(3, 'mods.zip')">Submit</button>
+    <span id="feedback3"></span>
+  </div>
+
+  <!-- Question 4 -->
+  <div class="question">
+    <p><span class="medium">MEDIUM</span> 4. Using ONLY one command line, display BOTH the content of the diablo4_builds/ folder and the content of the eldenRingConfig/ folder. How many do you see in total?</p>
+    <input type="text" id="answer4" required>
+    <button onclick="checkAnswer(4, '13')">Submit</button>
+    <span id="feedback4"></span>
+  </div>
+
+  <!-- Question 5 -->
+  <div class="question">
+    <p><span class="medium">MEDIUM</span> 5.  You're slightly worried about the size of the StreetFighter videos your friend sent you. Display their total size in a human readable format. What is the number (forget the unit)?</p>
+    <input type="text" id="answer5" required>
+    <button onclick="checkAnswer(5, '113')">Submit</button>
+    <span id="feedback5"></span>
+  </div>
+
+  <!-- Question 6 -->
+  <div class="question">
+    <p><span class="hard">HARD</span> 6. You downloaded a folder containing Diablo 4 builds. List them; do you notice a pattern? Now ONLY display those related to druids. What command did you use?</p>
+    <input type="text" id="answer6" required>
+    <button onclick="checkAnswer(6, 'ls diablo4_builds/druid*')">Submit</button>
+    <span id="feedback6"></span>
+  </div>
+
+  <!-- Question 7 -->
+  <div class="question">
+    <p><span class="hard">HARD</span> 7. In your current directory, display ONLY the text files. What command did you use?</p>
+    <input type="text" id="answer7" required>
+    <button onclick="checkAnswer(7, 'ls *.txt')">Submit</button>
+    <span id="feedback7"></span>
+  </div>
+
+<!-- Question 8 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 8. Your friend is helping you debug Elden Ring and asks you to MOVE INTO the eldenRingConfig directory and give him the full path of that directory. What command did you use to get the full path of the directory?</p>
+  <input type="text" id="answer8" required>
+  <button onclick="checkAnswer(8, 'pwd')">Submit</button>
+  <span id="feedback8"></span>
+</div>
+
+<!-- Question 9 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 9. Your friend tells you that the path is fine and asks you to move back by 1 folder (where you were previously). What command did you use to move backwards?</p>
+  <input type="text" id="answer9" required>
+  <button onclick="checkAnswer(9, 'cd ..')">Submit</button>
+  <span id="feedback9"></span>
+</div>
+
+<!-- Question 10 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 10. Your friend asks you to MOVE INTO the very last folder of the eldenRingConfig directory and then list the files there. How many files did you see (including extension)?</p>
+  <input type="text" id="answer10" required>
+  <button onclick="checkAnswer(10, 'settings.config')">Submit</button>
+  <span id="feedback10"></span>
+</div>
+
+<!-- Question 11 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 11. Your friend tells you it's fine and asks you to go 2 folders back. What command did you use?</p>
+  <input type="text" id="answer11" required>
+  <button onclick="checkAnswer(11, 'cd ../..')">Submit</button>
+  <span id="feedback11"></span>
+</div>
+
+<!-- Question 12 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 12. Your friend tells you everything is fine and asks you to MOVE INTO your Home directory in Linux. What command did you use?</p>
+  <input type="text" id="answer12" required>
+  <button onclick="checkAnswer(12, 'cd ~')">Submit</button>
+  <span id="feedback12"></span>
+</div>
+
+  <!-- Question 13 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 13. Go to ~/Documents and create a folder named 'elden_ring_mods'. What command did you use?</p>
+  <input type="text" id="answer13" required>
+  <button onclick="checkAnswer(13, 'mkdir elden_ring_mods')">Submit</button>
+  <span id="feedback13"></span>
+</div>
+
+<!-- Question 14 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 14. Nevermind, delete that folder. What command did you use?</p>
+  <input type="text" id="answer14" required>
+  <button onclick="checkAnswer(14, 'rmdir elden_ring_mods')">Submit</button>
+  <span id="feedback14"></span>
+</div>
+
+<!-- Question 15 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 15. Create 3 folders, using ONLY one command: they'll be called "er_mods", "er_config" and "er_data". What command did you use?</p>
+  <input type="text" id="answer15" required>
+  <button onclick="checkAnswer(15, 'mkdir er_mods er_config er_data')">Submit</button>
+  <span id="feedback15"></span>
+</div>
+
+<!-- Question 16 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 16. Nevermind, we don't need "er_config" and "er_data". Using ONLY one command, delete thes 2 folders. What command did you use?</p>
+  <input type="text" id="answer16" required>
+  <button onclick="checkAnswer(16, 'rmdir er_config er_data')">Submit</button>
+  <span id="feedback16"></span>
+</div>
+
+<!-- Question 17 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 17. Create another folder called My Configs and list the folders/files in the directory. Is there any form of punctuation in any of your file names? If so, which?</p>
+  <select id="answer17">
+    <option value="">Select an option</option>
+    <option value="single quotes">Single Quotes</option>
+    <option value="double quotes">Double Quotes</option>
+    <option value="no punctuation">No Punctuation</option>
+    <!-- Add other options as necessary -->
+  </select>
+  <button onclick="checkAnswer(17, 'single quotes')">Submit</button>
+  <span id="feedback17"></span>
+</div>
+
+<!-- Question 18 -->
+<div class="question">
+  <p><span class="hard">HARD</span> 18. Create 3 layers of folders using ONLY one command: backup --> data --> saves. What command did you use?</p>
+  <input type="text" id="answer18" required>
+  <button onclick="checkAnswer(18, 'mkdir -p backup/data/saves')">Submit</button>
+  <span id="feedback18"></span>
+</div>
+
+<!-- Question 19 -->
+<div class="question">
+  <p><span class="hard">HARD</span> 19.  Nevermind, delete the backup folder and everything inside it, using ONLY one command. What is the letter of the option you needed to use?</p>
+  <input type="text" id="answer19" required>
+  <button onclick="checkAnswer(19, 'r')">Submit</button>
+  <span id="feedback19"></span>
+</div>
+
+  <!-- Question 20 -->
+<div class="question">
+  <p><span class="hard">HARD</span> 20. Move INTO the er_mods/ folder and while staying there, copy the .zip file from the Elden Ring Mods folder in the LinuxPractice folders, into your current directory. After doing that, if you do 'ls', do you see the zip file?</p>
+  <input type="text" id="answer20" required>
+  <button onclick="checkAnswer(20, 'yes')">Submit</button>
+  <span id="feedback20"></span>
+</div>
+
+<!-- Question 21 -->
+<div class="question">
+  <p><span class="hard">HARD</span> 21. While statying in the current directory (er_mods/), copy the 'errorLogs.txt' in the LinuxPractice folders into the Desktop. Do a 'ls' on your Desktop's directory; do you see the errorLogs.txt?</p>
+  <input type="text" id="answer21" required>
+  <button onclick="checkAnswer(21, 'yes')">Submit</button>
+  <span id="feedback21"></span>
+</div>
+
+<!-- Question 22 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 22. Move the mods.zip file in your current directory back by 1 folder. Do a 'ls' in your current directory, does a mods.zip appear?</p>
+  <input type="text" id="answer22" required>
+  <button onclick="checkAnswer(22, 'no')">Submit</button>
+  <span id="feedback22"></span>
+</div>
+
+<!-- Question 23 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 23. Go back by 1 folder and rename the mods.zip into er_mods.zip. What command did you use?</p>
+  <input type="text" id="answer23" required>
+  <button onclick="checkAnswer(23, 'mv mods.zip er_mods.zip')">Submit</button>
+  <span id="feedback23"></span>
+</div>
+
+  <!-- Question 24 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 24. Using ONLY one command and while staying in your directory, create 3 files in the er_mods/ folder: 'assets.bin', 'maps.bin', 'models.bin'. What command did you use (only the first word in command)?</p>
+  <input type="text" id="answer24" required>
+  <button onclick="checkAnswer(24, 'touch')">Submit</button>
+  <span id="feedback24"></span>
+</div>
+
+<!-- Question 25 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 25. In your current directory, create a backup.txt. What command did you use?</p>
+  <input type="text" id="answer25" required>
+  <button onclick="checkAnswer(25, 'touch backup.txt')">Submit</button>
+  <span id="feedback25"></span>
+</div>
+
+<!-- Question 26 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 26. Go INTO er_mods/ folder and zip all 3 bin files you created into a zip file called 'bin.zip'. What command did you use to zip all 3 bin files into 'bin.zip'?</p>
+  <input type="text" id="answer26" required>
+  <button onclick="checkAnswer(26, 'zip bin.zip assets.bin maps.bin models.bin')">Submit</button>
+  <span id="feedback26"></span>
+</div>
+
+<!-- Question 27 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 27. List the files in that zip. What is the archive length total that shows up?</p>
+  <input type="text" id="answer27" required>
+  <button onclick="checkAnswer(27, '0')">Submit</button>
+  <span id="feedback27"></span>
+</div>
+
+<!-- Question 28 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 28. Unzip the bin.zip into a folder named bin_backup.zip. What command did you use?</p>
+  <input type="text" id="answer28" required>
+  <button onclick="checkAnswer(28, 'unzip bin.zip -d bin_backup')">Submit</button>
+  <span id="feedback28"></span>
+</div>
+
+<!-- Question 29 -->
+<div class="question">
+  <p><span class="hard">HARD</span> 29. Do the same as question #26 but this time with the "tar" command and the output will be a .tar.gz. What option did you use?</p>
+  <input type="text" id="answer29" required>
+  <button onclick="checkAnswer(29, '-czf')">Submit</button>
+  <span id="feedback29"></span>
+</div>
+
+<!-- Question 30 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 30. Go back to ~/LinuxPractice/Chapitre_1/startHERE. Your find asks you to confirm if there's truly a 'data01.dbt' file somewhere in there. Did anything come up?</p>
+  <input type="text" id="answer30" required>
+  <button onclick="checkAnswer(30, 'no')">Submit</button>
+  <span id="feedback30"></span>
+</div>
+
+<!-- Question 31 -->
+<div class="question">
+  <p><span class="hard">HARD</span> 31. Try to search for all .dbt files, how many files came up?</p>
+  <input type="text" id="answer31" required>
+  <button onclick="checkAnswer(31, '2')">Submit</button>
+  <span id="feedback31"></span>
+</div>
+
+<!-- Question 32 -->
+<div class="question">
+  <p><span class="hard">HARD</span> 32. While remaining in startHERE, look for a file where '409' is mentionned. There are a lot of text files and folders so it's quite frustrating...using ONLY one command, look for where '409' is mentionned in any directory starting the search from where you currently are. At what line of the file did it get mentionned?</p>
+  <input type="text" id="answer32" required>
+  <button onclick="checkAnswer(32, '24')">Submit</button>
+  <span id="feedback32"></span>
+</div>
+
+<!-- Question 33 -->
+<div class="question">
+  <p><span class="hard">HARD</span> 33. Using the same command as above, find where 'berserk' skills are mentionned. How many mentions show up?</p>
+  <input type="text" id="answer33" required>
+  <button onclick="checkAnswer(33, '5')">Submit</button>
+  <span id="feedback33"></span>
+</div>
+
+  <!-- Question 34 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 34. Open Firefox webrowser by typing 'firefox' and now find a command to open up processes. What command did you use?</p>
+  <input type="text" id="answer34" required>
+  <button onclick="checkAnswer(34, 'top')">Submit</button>
+  <span id="feedback34"></span>
+</div>
+
+<!-- Question 35 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 35. In what column do you see Firefox?</p>
+  <input type="text" id="answer35" required>
+  <button onclick="checkAnswer(35, 'command')">Submit</button>
+  <span id="feedback35"></span>
+</div>
+
+<!-- Question 36 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 36. Check how much RAM is being used and display it in a human readable format. What command did you use?</p>
+  <input type="text" id="answer36" required>
+  <button onclick="checkAnswer(36, 'free -h')">Submit</button>
+  <span id="feedback36"></span>
+</div>
+
+<!-- Question 37 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 37. Check how long your machine has been running but display it in a prettier/more readable way. What's the letter of the option you added to the command?</p>
+  <input type="text" id="answer37" required>
+  <button onclick="checkAnswer(37, 'p')">Submit</button>
+  <span id="feedback37"></span>
+</div>
+
+<!-- Question 38 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 38. Check if nexusmod is online. How many bytes are being received?</p>
+  <input type="text" id="answer38" required>
+  <button onclick="checkAnswer(38, '64')">Submit</button>
+  <span id="feedback38"></span>
+</div>
+
+<!-- Question 39 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 39. Check if faimawama.co.uk is online. Is it online?</p>
+  <input type="text" id="answer39" required>
+  <button onclick="checkAnswer(39, 'no')">Submit</button>
+  <span id="feedback39"></span>
+</div>
+
+<!-- Question 40 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 40. Go to ~/Documents/er_mods folder where you have bin.zip, and using chmod, make that zip file unaccessible to all users. What command did you use?</p>
+  <input type="text" id="answer40" required>
+  <button onclick="checkAnswer(40, 'chmod a-r bin.zip')">Submit</button>
+  <span id="feedback40"></span>
+</div>
+
+<!-- Question 41 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 41. Try to unzip bin.zip into a folder called test. Were you able to?</p>
+  <input type="text" id="answer41" required>
+  <button onclick="checkAnswer(41, 'no')">Submit</button>
+  <span id="feedback41"></span>
+</div>
+
+<!-- Question 42 -->
+<div class="question">
+  <p><span class="easy">EASY</span> Now try to add sudo before the previous command you did. You just became a god by doing so. Did it work?</p>
+  <input type="text" id="answer42" required>
+  <button onclick="checkAnswer(42, 'yes')">Submit</button>
+  <span id="feedback42"></span>
+</div>
+
+<!-- Question 43 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 43. However now we want to give all users access to it again. Which letter/symbol changed compared to #40?</p>
+  <input type="text" id="answer43" required>
+  <button onclick="checkAnswer(43, '-')">Submit</button>
+  <span id="feedback43"></span>
+</div>
+
+<!-- Question 44 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 44. Try to update your system (do not use sudo). Does it work?</p>
+  <input type="text" id="answer44" required>
+  <button onclick="checkAnswer(44, 'no')">Submit</button>
+  <span id="feedback44"></span>
+</div>
+
+<!-- Question 45 -->
+<div class="question">
+  <p><span class="medium">MEDIUM</span> 45. Now try with sudo. Does it work?</p>
+  <input type="text" id="answer45" required>
+  <button onclick="checkAnswer(45, 'yes')">Submit</button>
+  <span id="feedback45"></span>
+</div>
+
+<!-- Question 46 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 46. Without a browser, download Google Chrome through the terminal (hint, this is the direct link: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb). What command did you use (just the command itself, first word)</p>
+  <input type="text" id="answer46" required>
+  <button onclick="checkAnswer(46, 'wget')">Submit</button>
+  <span id="feedback46"></span>
+</div>
+
+<!-- Question 47 -->
+<div class="question">
+  <p><span class="hard">MEDIUM</span> 47.  While still only using the terminal, install chrome the file you just downloaded. What command did you use? (only the first two words)</p>
+  <input type="text" id="answer47" required>
+  <button onclick="checkAnswer(47, 'sudo dpkg')">Submit</button>
+  <span id="feedback47"></span>
+</div>
+
+<!-- Question 48 -->
+<div class="question">
+  <p><span class="hard">HARD</span> 48. Install the package 'Tree'. What command did you use?</p>
+  <input type="text" id="answer48" required>
+  <button onclick="checkAnswer(48, 'sudo apt-get install tree')">Submit</button>
+  <span id="feedback48"></span>
+</div>
+
+<!-- Question 49 -->
+<div class="question">
+  <p><span class="easy">EASY</span> 49. Now that you have tree. Use it to display your directory depth. What command did you use?</p>
+  <input type="text" id="answer49" required>
+  <button onclick="checkAnswer(49, 'tree')">Submit</button>
+  <span id="feedback49"></span>
+</div>
+
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e1e; /* Dark background */
+  color: #ffffff; /* Light text */
+  line-height: 1.6;
+}
+
+.instructions {
+  background-color: #333; /* Dark background for instructions */
+  color: #fff; /* Light text for instructions */
+  padding: 20px;
+  margin: 0 auto 30px; /* Auto margins for horizontal centering */
+  border-radius: 8px;
+  border: 1px solid #3a3a3a; /* Dark border for instructions */
+  text-align: center; /* Center text */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally in the flex container */
+  flex-direction: column; /* Stack children vertically */
+  width: 80%; /* Set a width */
+  max-width: 700px; /* Max width to match the quiz container */
+}
+
+/* Since we are centering text and it's a flex item, we no longer need the margins on the paragraph and list */
+.instructions p, .instructions ol {
+  margin-bottom: 10px;
+  width: 100%; /* Ensure full width within the flex container */
+}
+
+.instructions ol {
+  padding-left: 20px; /* Adjust the padding to align numbers properly */
+  list-style-position: inside; /* Position the numbers inside the content flow */
+}
+
+.instructions li {
+  line-height: 1.6;
+  text-align: left; /* Ensure text is aligned to the left */
+}
+
+
+.quiz-container {
+  width: 80%;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #2d2d2d; /* Slightly lighter dark background for the container */
+  border: 1px solid #3a3a3a; /* Dark border for the container */
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.question {
+  margin-bottom: 30px; /* Increase the bottom margin for more space between questions */
+  padding: 20px; /* Add padding for spacing inside the question box */
+  background: #2d2d2d; /* Slightly different background for each question */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds subtle shadow for depth */
+}
+
+
+.question p {
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: calc(100% - 90px);
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #555; /* Darker border for inputs */
+  background-color: #333; /* Dark background for input */
+  color: #fff; /* Light text for input */
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+button {
+  width: 80px;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.correct {
+  color: #0f0;
+  font-weight: bold;
+}
+
+.wrong {
+  color: #f00;
+  font-weight: bold;
+}
+
+.easy, .medium, .hard {
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: white;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.easy {
+  background-color: #90ee90; /* Light Green */
+}
+
+.medium {
+  background-color: #ffeb3b; /* Light Yellow */
+  color: black; /* For better contrast in medium tags */
+}
+
+.hard {
+  background-color: #ff5722; /* Light Red */
+}
+
+.instructions {
+  background-color: #333; /* Dark background for instructions */
+  color: #fff; /* Light text for instructions */
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  border: 1px solid #3a3a3a; /* Dark border for instructions */
+}
+
+.instructions p, .instructions ol {
+  margin-bottom: 10px;
+}
+
+.instructions li {
+  line-height: 1.6;
+}
